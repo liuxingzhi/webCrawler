@@ -52,19 +52,19 @@ def find_ips(url):
         if response.status_code is 200:
             yield proxy
             
-pro = find_ips(url_ips)
-for p in find_ips(url_ips):
-    print(p)
+#pro = find_ips(url_ips)
+#for p in find_ips(url_ips):
+#    print(p)
 #print("===================")
 #for p in find_ips(url_ips):
 #    print(p)
-#url_bilibili = "https://bangumi.bilibili.com/jsonp/seasoninfo/6487.ver?callback=seasonListCallback&jsonp=jsonp&_=1512975796109"
-#for index,proxies in enumerate(find_ips(url_ips)):
-#    try:
-#        a = find_bilibili_links(url_bilibili)
-#    except Exception:
-#        continue
-#    print(index)
-#    print(a)
-#    print(proxies)
-#    break;
+url_bilibili = "https://bangumi.bilibili.com/jsonp/seasoninfo/6487.ver?callback=seasonListCallback&jsonp=jsonp&_=1512975796109"
+for index,proxies in enumerate(find_ips(url_ips)):
+    try:
+        a = find_bilibili_links(url_bilibili)
+    except Exception:
+        continue
+    print(index)
+    print(a)
+    print(proxies)
+    break;
